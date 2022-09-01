@@ -20,6 +20,7 @@ import {
   Select,
   Center,
   Image,
+  Textarea,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -121,7 +122,49 @@ function Tables() {
               </Grid>
             </TabPanel>
             <TabPanel>
-              <p>three!</p>
+              <Grid templateColumns={"repeat(2,1fr)"} mt="2rem">
+                <GridItem>
+                  {" "}
+                  <Grid templateRows={"1fr ,1fr"} rowGap="1rem">
+                    <GridItem>
+                      {" "}
+                      <LeftSideLabelSelect label="Currency" />
+                    </GridItem>
+                    <GridItem>
+                      {" "}
+                      <LeftSideLabelInput label="Amount" />
+                    </GridItem>
+                  </Grid>
+                </GridItem>
+                <GridItem></GridItem>
+                <GridItem>
+                  <Flex gap="1rem">
+                    <SaveButton />
+                    <CancelButton />
+                  </Flex>
+                </GridItem>
+              </Grid>
+            </TabPanel>
+            <TabPanel>
+              <Grid templateRows={"repeat(2 , 1fr)"}>
+                <GridItem>
+                  {" "}
+                  <Flex flexDirection={"column"}>
+                    <Box>
+                      {" "}
+                      <Text>Notes:</Text>
+                    </Box>
+                    <Textarea w="80%" mt="1rem"></Textarea>
+                  </Flex>
+                </GridItem>
+                <GridItem>
+                  <Flex gap="1rem">
+                    {" "}
+                    <SaveButton />
+                    <CancelButton />
+                  </Flex>
+                </GridItem>
+              </Grid>
             </TabPanel>
           </TabPanels>
         </Tabs>

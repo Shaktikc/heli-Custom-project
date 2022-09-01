@@ -25,8 +25,11 @@ import {
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
+import { CancelButton } from "components/Common/CancelButton";
 import { LeftSideLabelInput } from "components/Common/LeftSideLabelInput";
 import { LeftSideLabelSelect } from "components/Common/LeftSideLabelSelect";
+import { SaveButton } from "components/Common/SaveButton";
+import { UploadUI } from "components/Common/UploadUI";
 import TablesProjectRow from "components/Tables/TablesProjectRow";
 import TablesTableRow from "components/Tables/TablesTableRow";
 import React from "react";
@@ -81,36 +84,41 @@ function Tables() {
                   </Grid>
                 </GridItem>
                 <GridItem>
-                  <Flex flexDirection={"column"}>
-                    {" "}
-                    <Center
-                      // bgColor={"blackAlpha.600"}
-                      w="12rem"
-                      h="8rem"
-                      borderTop={"1px dashed #808080"}
-                      borderLeft={"1px dashed #808080"}
-                      borderRight={"1px dashed #808080"}
-                      borderTopRadius="8px"
-                      // borderRightRadius="8px"
-                    >
-                      <Image src="/assets/img/upload.png" h="2rem" w="rem" />
-                    </Center>
-                    <Center
-                      w="12rem"
-                      h="2rem"
-                      border={"1px solid #808080"}
-                      // borderLeft={"1px solid black"}
-                      // borderRight={"1px solid black"}
-                      borderBottomRadius="8px"
-                    >
-                      Upload Image
-                    </Center>
+                  <UploadUI />
+                </GridItem>
+                <GridItem>
+                  <Flex gap="1rem">
+                    <SaveButton />
+                    <CancelButton />
                   </Flex>
                 </GridItem>
               </Grid>
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <Grid templateColumns={"repeat(2,1fr)"} mt="2rem">
+                <GridItem>
+                  {" "}
+                  <Grid templateRows={"1fr ,1fr"} rowGap="1rem">
+                    <GridItem>
+                      {" "}
+                      <LeftSideLabelSelect label="Currency" />
+                    </GridItem>
+                    <GridItem>
+                      {" "}
+                      <LeftSideLabelInput label="Amount" />
+                    </GridItem>
+                  </Grid>
+                </GridItem>
+                <GridItem>
+                  <UploadUI />
+                </GridItem>
+                <GridItem>
+                  <Flex gap="1rem">
+                    <SaveButton />
+                    <CancelButton />
+                  </Flex>
+                </GridItem>
+              </Grid>
             </TabPanel>
             <TabPanel>
               <p>three!</p>

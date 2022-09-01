@@ -3,8 +3,9 @@ import { Formik, Form, Field, FieldArray } from "formik";
 import { Button, Box, Grid, GridItem, Flex } from "@chakra-ui/react";
 import { InputField } from "./InputField";
 import { ButtonWithOutStyle } from "components/Common/ButtonWithOutStyle";
-import { SubmitButton } from "components/Common/SubmitButton";
+
 import { CancelButton } from "components/Common/CancelButton";
+import { SaveButton } from "components/Common/SaveButton";
 
 const initialValues = {
   addLocation: [
@@ -101,7 +102,7 @@ export const LocationForm = () => {
           )}
         </Formik>
         <Flex gap="1.5rem">
-          <SubmitButton />
+          <SaveButton />
           <CancelButton />
         </Flex>
       </Box>

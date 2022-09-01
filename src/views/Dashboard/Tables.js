@@ -18,6 +18,7 @@ import {
   Tab,
   TabPanel,
   Select,
+  Center,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -64,14 +65,44 @@ function Tables() {
 
           <TabPanels>
             <TabPanel>
-              <Grid templateRows={"1fr ,1fr"} rowGap="1rem">
+              <Grid templateColumns={"repeat(2,1fr)"}>
                 <GridItem>
                   {" "}
-                  <LeftSideLabelSelect label=" Select Unit" />
+                  <Grid templateRows={"1fr ,1fr"} rowGap="1rem">
+                    <GridItem>
+                      {" "}
+                      <LeftSideLabelSelect label=" Select Unit" />
+                    </GridItem>
+                    <GridItem>
+                      {" "}
+                      <LeftSideLabelInput label="Total Kgs" />
+                    </GridItem>
+                  </Grid>
                 </GridItem>
                 <GridItem>
-                  {" "}
-                  <LeftSideLabelInput label="Total Kgs" />
+                  <Flex flexDirection={"column"}>
+                    {" "}
+                    <Box
+                      // bgColor={"blackAlpha.600"}
+                      w="12rem"
+                      h="8rem"
+                      borderTop={"1px dashed #808080"}
+                      borderLeft={"1px dashed #808080"}
+                      borderRight={"1px dashed #808080"}
+                      borderTopRadius="8px"
+                      // borderRightRadius="8px"
+                    ></Box>
+                    <Center
+                      w="12rem"
+                      h="2rem"
+                      border={"1px solid #808080"}
+                      // borderLeft={"1px solid black"}
+                      // borderRight={"1px solid black"}
+                      borderBottomRadius="8px"
+                    >
+                      Upload
+                    </Center>
+                  </Flex>
                 </GridItem>
               </Grid>
             </TabPanel>

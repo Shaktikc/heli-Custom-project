@@ -3,7 +3,7 @@ import { Box, Flex, Select } from "@chakra-ui/react";
 
 export const LeftSideLabelSelect = ({ label }) => {
   return (
-    <Flex alignItems={"center"}>
+    <Flex alignItems={"center"} gap="1.2rem">
       <Box w="7rem" fontSize={"sm"}>
         {label}
       </Box>

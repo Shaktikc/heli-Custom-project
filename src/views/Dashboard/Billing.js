@@ -16,6 +16,7 @@ import BackgroundCard1 from "assets/img/BackgroundCard1.png";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
+import { PageTitle } from "components/Common/PageTitle";
 import IconBox from "components/Icons/IconBox";
 import { MastercardIcon, VisaIcon } from "components/Icons/Icons";
 import { HSeparator } from "components/Separator/Separator";
@@ -48,7 +49,23 @@ function Billing() {
 
   return (
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
-      Billing
+      <Card>
+        <PageTitle title="Reports" />
+        <Box
+          bgColor={"gray.200"}
+          w="10rem"
+          // h="5rem"
+          p="0.5rem"
+          borderRadius={"4px"}
+          lineHeight="1.8rem"
+          mt="1rem"
+        >
+          <Text fontSize={"xs"}>Total Trips</Text>
+          <Text fontSize={"4xl"} fontWeight="bold">
+            500
+          </Text>
+        </Box>
+      </Card>
     </Flex>
   );
 }

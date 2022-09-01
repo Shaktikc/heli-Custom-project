@@ -33,7 +33,7 @@ var dashRoutes = [
   },
   {
     path: "/billing",
-    name: "Fare Details",
+    name: "Reports",
     rtlName: "لوحة القيادة",
     icon: <CreditIcon color="inherit" />,
     component: Billing,

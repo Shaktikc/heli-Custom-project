@@ -17,12 +17,14 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Select,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import { LeftSideLabelInput } from "components/Common/LeftSideLabelInput";
+import { LeftSideLabelSelect } from "components/Common/LeftSideLabelSelect";
 import TablesProjectRow from "components/Tables/TablesProjectRow";
 import TablesTableRow from "components/Tables/TablesTableRow";
 import React from "react";
@@ -62,7 +64,16 @@ function Tables() {
 
           <TabPanels>
             <TabPanel>
-              <p>one!</p>
+              <Grid templateRows={"1fr ,1fr"} rowGap="1rem">
+                <GridItem>
+                  {" "}
+                  <LeftSideLabelSelect label=" Select Unit" />
+                </GridItem>
+                <GridItem>
+                  {" "}
+                  <LeftSideLabelInput label="Total Kgs" />
+                </GridItem>
+              </Grid>
             </TabPanel>
             <TabPanel>
               <p>two!</p>

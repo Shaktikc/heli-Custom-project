@@ -17,6 +17,7 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import { PageTitle } from "components/Common/PageTitle";
+import { StatusUI } from "components/Common/StatusUI";
 import IconBox from "components/Icons/IconBox";
 import { MastercardIcon, VisaIcon } from "components/Icons/Icons";
 import { HSeparator } from "components/Separator/Separator";
@@ -51,20 +52,12 @@ function Billing() {
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
       <Card>
         <PageTitle title="Reports" />
-        <Box
-          bgColor={"gray.200"}
-          w="10rem"
-          // h="5rem"
-          p="0.5rem"
-          borderRadius={"4px"}
-          lineHeight="1.8rem"
-          mt="1rem"
-        >
-          <Text fontSize={"xs"}>Total Trips</Text>
-          <Text fontSize={"4xl"} fontWeight="bold">
-            500
-          </Text>
-        </Box>
+        <Flex gap="2rem">
+          <StatusUI title="Total Trips" number="500" />
+          <StatusUI title="Pending Approval" number="480" color="red.400" />
+          <StatusUI title="Approval Trip" number="20" color="green.400" />
+          <StatusUI title="Total Transcation" number="1000" />
+        </Flex>
       </Card>
     </Flex>
   );

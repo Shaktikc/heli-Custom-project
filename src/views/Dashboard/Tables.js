@@ -19,6 +19,7 @@ import {
   TabPanel,
   Select,
   Center,
+  Image,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -65,7 +66,7 @@ function Tables() {
 
           <TabPanels>
             <TabPanel>
-              <Grid templateColumns={"repeat(2,1fr)"}>
+              <Grid templateColumns={"repeat(2,1fr)"} mt="2rem">
                 <GridItem>
                   {" "}
                   <Grid templateRows={"1fr ,1fr"} rowGap="1rem">
@@ -82,7 +83,7 @@ function Tables() {
                 <GridItem>
                   <Flex flexDirection={"column"}>
                     {" "}
-                    <Box
+                    <Center
                       // bgColor={"blackAlpha.600"}
                       w="12rem"
                       h="8rem"
@@ -91,7 +92,9 @@ function Tables() {
                       borderRight={"1px dashed #808080"}
                       borderTopRadius="8px"
                       // borderRightRadius="8px"
-                    ></Box>
+                    >
+                      <Image src="/assets/img/upload.png" h="2rem" w="rem" />
+                    </Center>
                     <Center
                       w="12rem"
                       h="2rem"
@@ -100,7 +103,7 @@ function Tables() {
                       // borderRight={"1px solid black"}
                       borderBottomRadius="8px"
                     >
-                      Upload
+                      Upload Image
                     </Center>
                   </Flex>
                 </GridItem>
